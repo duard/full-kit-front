@@ -17,7 +17,7 @@ export function ReadyToBuildCTA() {
           </p>
         </div>
         <a
-          href="https://github.com/Qualiora/shaduard"
+          href="https://github.com/duard"
           className={buttonVariants({ size: "lg" })}
           target="_blank"
           rel="noopener noreferrer"

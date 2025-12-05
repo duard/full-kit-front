@@ -6,8 +6,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-lato:
-    var(--font-lato), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  --font-inter:
+    var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-cairo:
     var(--font-cairo), ui-sans-serif, system-ui, sans-serif,

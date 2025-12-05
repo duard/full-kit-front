@@ -1,6 +1,6 @@
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 
 import { SocialProofBadgeAvatarsData } from "../_data/social-proof-badge-avatars"
 
@@ -46,7 +46,7 @@ export function Hero() {
 function SocialProofBadge() {
   return (
     <a
-      href="https://github.com/Qualiora/shaduard"
+      href="https://github.com/duard"
       className={cn(
         buttonVariants({ variant: "outline", size: "sm" }),
         "group gap-x-1.5"

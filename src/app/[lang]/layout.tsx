@@ -1,4 +1,4 @@
-import { Cairo, Lato } from "next/font/google"
+import { Cairo, Inter } from "next/font/google"
 import { getServerSession } from "next-auth"
 
 import { i18n } from "@/configs/i18n"
@@ -29,11 +29,9 @@ export const metadata: Metadata = {
 
 // Define fonts for the application
 // More info: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
-const latoFont = Lato({
+const interFont = Inter({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-lato",
+  variable: "--font-inter",
 })
 const cairoFont = Cairo({
   subsets: ["arabic"],
@@ -57,9 +55,9 @@ export default async function RootLayout(props: {
     <html lang={params.lang} dir={direction} suppressHydrationWarning>
       <body
         className={cn(
-          "[&:lang(en)]:font-lato [&:lang(ar)]:font-cairo", // Set font styles based on the language
+          "[&:lang(en)]:font-inter [&:lang(ar)]:font-cairo", // Set font styles based on the language
           "bg-background text-foreground antialiased overscroll-none", // Set background, text, , anti-aliasing styles, and overscroll behavior
-          latoFont.variable, // Include Lato font variable
+          interFont.variable, // Include Inter font variable
           cairoFont.variable // Include Cairo font variable
         )}
       >

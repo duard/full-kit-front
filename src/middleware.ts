@@ -7,9 +7,9 @@ import { isGuestRoute, isPublicRoute } from "@/lib/auth-routes"
 import {
   ensureLocalizedPathname,
   getLocaleFromPathname,
-  getPreferredLocale,
   isPathnameMissingLocale,
 } from "@/lib/i18n"
+import { i18n } from "@/configs/i18n"
 import { ensureRedirectPathname, ensureWithoutPrefix } from "@/lib/utils"
 
 function redirect(pathname: string, request: NextRequest) {
@@ -17,8 +17,8 @@ function redirect(pathname: string, request: NextRequest) {
   let resolvedPathname = pathname
 
   if (isPathnameMissingLocale(pathname)) {
-    const preferredLocale = getPreferredLocale(request)
-    resolvedPathname = ensureLocalizedPathname(pathname, preferredLocale)
+    const defaultLocale = i18n.defaultLocale
+    resolvedPathname = ensureLocalizedPathname(pathname, defaultLocale)
   }
   if (search) {
     resolvedPathname += search
